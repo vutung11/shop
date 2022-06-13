@@ -20,19 +20,25 @@ import Stayhome from "./components/Stayhome";
 import Shop from "./components/Shop";
 import Home from "./pages/Home";
 import ShopProduct from "./components/ShopProduct";
+import Search from "./components/Search";
+import Sort from "./components/Sort";
+import CreateProduct from "./components/CreateProduct";
 
 function App() {
     return (
         <>
+            <Header />
+            <Stayhome />
+            <Sort />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/products" element={<Home />} />
                 <Route path="/products/:id" element={<Prodetails />} />
+                <Route path="/createproduct" element={<CreateProduct />} />
+                <Route path="/search/:value" element={<Search />} />
             </Routes>
-            {/* <Header />
-            <Stayhome />
-            <Shop />
             <Newsletter />
-            <Footer /> */}
+            <Footer />
         </>
     );
 }

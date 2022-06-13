@@ -4,6 +4,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import axios from "axios";
 import { BrowserRouter as Router } from "react-router-dom";
+import { ContextProvider } from "./context/Store";
 
 axios.defaults.baseURL = "http://localhost:5000/api";
 
@@ -12,7 +13,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
         <Router>
-            <App />
+            <ContextProvider>
+                <App />
+            </ContextProvider>
         </Router>
     </React.StrictMode>
 );

@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
+    const inputRef = useRef();
+    const navigate = useNavigate();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const value = inputRef.current.value;
+        if (!value.trim()) return;
+        return navigate(`/search/${value}`);
+    };
     return (
         <div>
             <section id="header">
-                <a href="#">
+                <Link to="/">
                     <img src="./img/logo.png" alt="" />
-                </a>
+                </Link>
+                <div>
+                    <form onSubmit={handleSubmit}>
+                        <input placeholder="Search" ref={inputRef} />
+                        <button>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+
                 <div>
                     <ul id="navbar">
                         <li>
@@ -16,7 +34,7 @@ const Header = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="#">Shop</a>
+                            <Link to="/createproduct">CreateProduct</Link>
                         </li>
                         <li>
                             <a href="#">Blog</a>

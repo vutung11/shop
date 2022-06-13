@@ -206,7 +206,7 @@ body {
 }
 #product1 .pro {
     position: relative;
-    width: 23%;
+    width: 18%;
     min-width: 250px;
     padding: 10px 12px;
     border: 1px solid #cce7e0;
@@ -220,7 +220,7 @@ body {
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.026);
 }
 #product1 .pro img {
-    width: 50%;
+    width: 224px;
     height: 280px;
     border-radius: 20px;
 }
@@ -656,7 +656,62 @@ footer a:hover {
     top: 10px;
     font-size: 1rem;
 }
+form {
+    position: relative;
+}
+form input {
+    display: inline-block;
+    width: 300px;
+    height: 30px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
 
+    border-radius: 5px;
+}
+form button i {
+    position: absolute;
+    top: 30%;
+    right: 0px;
+    /* transform: translateX(-50%, 50%); */
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+form button:hover {
+    cursor: pointer;
+}
+.createproduct {
+    width: 50%;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #f4fdfd;
+    /* background-color: red; */
+    box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+}
+.createproduct h4 {
+    /* display: block; */
+    margin-left: 50%;
+}
+.createproduct form {
+    left: 20%;
+}
+.createproduct input {
+    display: block;
+    width: 70%;
+    border: 1px solid #088178;
+    margin-top: 2px;
+}
+.createproduct button {
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+.createproduct button:hover {
+    background-color: #088178;
+    color: #fff;
+    border: 2px solid transparent;
+}
 @media (max-width: 477px) {
     .section-p1 {
         padding: 20px;

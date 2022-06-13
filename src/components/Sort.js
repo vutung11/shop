@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { useMyContext } from "../context/Store";
 import useCustomerRouter from "../hooks/useCustomerRouter";
 
-const Sort = React.memo(({ page, sort }) => {
+const Sort = React.memo(({}) => {
+    const { page, sort } = useMyContext();
     const { pushQuery } = useCustomerRouter();
     const handleSort = (e) => {
         const { value } = e.target;

@@ -1,8 +1,10 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useMyContext } from "../context/Store";
 import useCustomerRouter from "./useCustomerRouter";
 
-const usePagination = ({ totalPages, page, sort }) => {
+const usePagination = ({ totalPages }) => {
+    const { page, sort } = useMyContext();
     const { pushQuery } = useCustomerRouter();
     const { firstArr, lastArr } = useMemo(() => {
         const newArr = [...Array(totalPages)].map((_, i) => i + 1);

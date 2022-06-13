@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useMyContext } from "../context/Store";
 import usePagination from "../hooks/usePagination";
 
-const Pagination = React.memo(({ totalPages, page, sort }) => {
+const Pagination = React.memo(({ totalPages }) => {
     const { firstArr, lastArr, isActive, next, prev, jump } = usePagination({
         totalPages,
-        page,
-        sort,
     });
+    const { page, sort } = useMyContext();
 
     return (
         <>
