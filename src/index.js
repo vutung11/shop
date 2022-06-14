@@ -6,7 +6,7 @@ import axios from "axios";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ContextProvider } from "./context/Store";
 
-axios.defaults.baseURL = "http://localhost:5000/api";
+axios.defaults.baseURL = "https://deploy-apiapp.herokuapp.com/api";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
